@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load model
-model = joblib.load("model/iris_model.pkl")
+model = joblib.load("iris_model.pkl")
 
 
 @app.route("/")
