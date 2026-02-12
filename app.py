@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load model
-model = joblib.load("model/iris_model.pkl")
+model = joblib.load("model/iris_data_model")
 
 
 @app.route("/")
@@ -24,5 +24,8 @@ def predict():
 
     return render_template("index.html", prediction=prediction)
 
+import os
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=10000)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
