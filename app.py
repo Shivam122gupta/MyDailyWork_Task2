@@ -8,7 +8,7 @@ app = Flask(__name__)
 model = joblib.load("model/iris_data_model")
 
 
-@app.route("/")
+@app.route("/",methods=["GET"])
 def home():
     return render_template("index.html")
 
