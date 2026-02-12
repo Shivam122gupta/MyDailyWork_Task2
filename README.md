@@ -1,162 +1,155 @@
-# 🌸 Iris Flower Classification Web App
+# Iris Flower Prediction Web App
 
-A professional end-to-end **Machine Learning project** that classifies iris flowers into species using their physical measurements.
-The project includes data analysis, model training, evaluation, and a **Streamlit web application** for real-time predictions.
-
----
-
-## 🚀 Project Overview
-
-This project builds a classification model using the famous **Iris dataset**.
-The goal is to predict the species of a flower based on:
-
-* Sepal length
-* Sepal width
-* Petal length
-* Petal width
-
-The trained model is deployed as an **interactive web app** using Streamlit.
+A simple and elegant **Machine Learning web application** that predicts the species of an Iris flower based on its measurements.
+This project demonstrates the **complete ML workflow** — from training a model to deploying it as a web application.
 
 ---
 
-## 📊 Dataset Information
+## Live Demo
 
-* **Dataset:** Iris Dataset (UCI Machine Learning Repository)
-* **Total samples:** 150
-* **Features:** 4
-* **Classes:** 3
-
-  * Iris-setosa
-  * Iris-versicolor
-  * Iris-virginica
+https://irisdatapridicitor2.vercel.app/
 
 ---
 
-## 🧠 Machine Learning Pipeline
+## Project Overview
 
-The project follows an industry-standard ML workflow:
+This application takes four input features:
 
-1. Data loading and inspection
-2. Feature–target separation
-3. Train–test split with stratification
-4. Feature scaling using `StandardScaler`
-5. Model training using **K-Nearest Neighbors (KNN)**
-6. Hyperparameter tuning with cross-validation
-7. Model evaluation
-8. Model saving using `joblib`
-9. Deployment with Streamlit
+* Sepal Length
+* Sepal Width
+* Petal Length
+* Petal Width
 
----
+Using a trained **scikit-learn classification model**, it predicts the species of the Iris flower:
 
-## 🛠️ Tech Stack
-
-* **Language:** Python
-* **Libraries:**
-
-  * pandas
-  * scikit-learn
-  * joblib
-  * streamlit
+* Iris Setosa
+* Iris Versicolor
+* Iris Virginica
 
 ---
 
-## 📁 Project Structure
+## Tech Stack
+
+**Machine Learning**
+
+* Python
+* scikit-learn
+* NumPy
+* Joblib
+
+**Backend**
+
+* Flask
+
+**Frontend**
+
+* HTML
+* CSS
+
+**Deployment**
+
+* Render (Web Service)
+* Vercel (Web Service)
+
+---
+
+## Project Structure
 
 ```
-iris-ml-project/
-│
-├── data/
-│   └── iris.csv
-│
-├── model/
-│   └── iris_model.pkl
-│
-├── src/
-│   ├── train.py
-│   └── predict.py
+MyDailyWork_Task2/
 │
 ├── app.py
 ├── requirements.txt
-└── README.md
+├── runtime.txt
+├── model/
+│   └── iris_model.pkl
+└── templates/
+    └── index.html
 ```
 
 ---
 
-## 📈 Model Performance
-
-* **Algorithm:** K-Nearest Neighbors
-* **Preprocessing:** StandardScaler
-* **Evaluation method:** Train–test split + cross-validation
-* **Accuracy:** ~95–100% (depending on split and k value)
-
----
-
-## ▶️ How to Run the Project
+## Installation (Local Setup)
 
 ### 1. Clone the repository
 
 ```
-git clone <your-repo-link>
-cd iris-ml-project
+git clone https://github.com/your-username/MyDailyWork_Task2.git
+cd MyDailyWork_Task2
 ```
 
-### 2. Install dependencies
+### 2. Create virtual environment (optional but recommended)
+
+```
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-### 3. Train the model
+### 4. Run the application
 
 ```
-python src/train.py
+python app.py
 ```
 
-### 4. Run the Streamlit app
+### 5. Open in browser
 
 ```
-streamlit run app.py
+http://127.0.0.1:5000
 ```
-
-The app will open automatically in your browser.
 
 ---
 
-## 🌐 Web App Features
+## Deployment on Render
 
-* Interactive sliders for flower measurements
-* Real-time species prediction
-* Clean and simple UI
-* Fast inference using saved model
+1. Push the project to GitHub.
+2. Go to **Render Dashboard**.
+3. Create a **New Web Service**.
+4. Connect your GitHub repository.
+5. Use these settings:
+
+**Build Command**
+
+```
+pip install -r requirements.txt
+```
+
+**Start Command**
+
+```
+gunicorn app:app
+```
+
+Render will automatically use the Python version specified in:
+
+```
+runtime.txt
+```
 
 ---
 
-## 📌 Key Learnings
+## Features
 
-* End-to-end ML pipeline
-* Feature scaling importance in distance-based models
-* Hyperparameter tuning
-* Model serialization
-* Deploying ML models with Streamlit
-
----
-
-## 🔮 Future Improvements
-
-* Add multiple model comparison
-* Deploy app online (Streamlit Cloud or Render)
-* Add confusion matrix visualization
-* Add model explainability
+* Clean and modern UI
+* Real-time prediction
+* Lightweight ML model
+* Deployable Flask architecture
+* Beginner-friendly project structure
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Shivam Gupta**
-B.Tech Student | Aspiring Data Scientist & ML Engineer
+Machine Learning & Data Science Enthusiast
 
----
 
-## ⭐ If you like this project
 
-Give it a star on GitHub and feel free to fork or contribute!
+## License
+
+This project is for educational and portfolio purposes.
